@@ -22,6 +22,10 @@ export class MRTstationComponent implements OnInit {
     this.page--;
   }
 
+  pageTo(page : number){
+    this.page = page;
+  }
+
   pageDown(){
     this.page++;
   }
