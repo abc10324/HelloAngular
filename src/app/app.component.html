@@ -43,29 +43,30 @@
                       <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" (click)="changeModule('app-mrtstation')" href="#">MRT station</a>
+                      <a class="nav-link" (click)="changeModuleTo('MRT')" href="#">MRT station</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" (click)="changeModule('')" href="#">Pricing</a>
+                      <a class="nav-link" (click)="changeModuleTo('Login')" href="#">Login</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" (click)="changeModule('')" href="#">Features</a>
+                      <a class="nav-link" (click)="changeModuleTo('')" href="#">Features</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" (click)="changeModule('')" href="#">Pricing</a>
+                      <a class="nav-link" (click)="changeModuleTo('')" href="#">Pricing</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" (click)="changeModule('')" href="#">Features</a>
+                      <a class="nav-link" (click)="changeModuleTo('')" href="#">Features</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" (click)="changeModule('')" href="#">Pricing</a>
+                      <a class="nav-link" (click)="changeModuleTo('MRT')" href="#">Pricing</a>
                     </li>
                   </ul>
             </nav>
             
           </div>
           <div class="col px-0 bg-dark">
-            <app-mrtstation *ngIf="currentModule == 'app-mrtstation'"></app-mrtstation>
+            <ng-container *ngComponentOutlet="mapping.get(currentModule)"></ng-container>
+            <!-- <app-mrtstation *ngIf="currentModule == 'app-mrtstation'"></app-mrtstation> -->
           </div>
         </div>
       </div>
