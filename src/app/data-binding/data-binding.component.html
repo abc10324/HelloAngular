@@ -1,0 +1,25 @@
+<div class="container-fluid p-5 bg-info">
+    <div class="bg-light rounded p-2">
+        Binding string : <span class="rounded" [ngClass]="validTwoWayBindingStr()">{{ twoWayBindingStr}}</span>
+    </div>
+    <br/>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">(DOM <-> Comp.) Two-way Binding input</span>
+        </div>
+        <input type="text" [(ngModel)]="twoWayBindingStr" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">(DOM <- Comp.)  Property Binding input</span>
+        </div>
+        <input type="text" [value]="twoWayBindingStr" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">(DOM -> Comp.)  Event Binding input</span>
+        </div>
+        <input type="text" (input)="twoWayBindingStr = $event.target.value" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+</div>

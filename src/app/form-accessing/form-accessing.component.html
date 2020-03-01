@@ -1,0 +1,7 @@
+<div class="container w-50 p-5 mx-auto bg-light form1">
+    <form (ngSubmit)="onSubmit(form1)" #form1="ngForm">
+        <input ngModel name="username" type="text" placeholder="Username" class="form-control"/><br/>
+        <input ngModel name="password" type="password" placeholder="Password" class="form-control"/><br/>
+        <input type="submit" class="btn btn-block btn-primary"/>
+    </form>
+</div>
